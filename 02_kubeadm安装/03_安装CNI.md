@@ -1,4 +1,4 @@
-安装calico
+## 安装calico
 
 ### 以下步骤只在master01执行
 ```shell
