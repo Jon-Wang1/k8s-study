@@ -22,9 +22,8 @@ kubectl config set-context tls-bootstrap-token-user@kubernetes     \
   --user=tls-bootstrap-token-user     \
   --kubeconfig=/etc/kubernetes/bootstrap-kubelet.kubeconfig
   
-kubectl config use-context tls-bootstrap-token-user@kubernetes  \   
+kubectl config use-context tls-bootstrap-token-user@kubernetes \
   --kubeconfig=/etc/kubernetes/bootstrap-kubelet.kubeconfig
-  
 #注意：如果要修改bootstrap.secret.yaml的token-id和token-secret，需要保证下图红圈内的字符串一致的，并且位数是一样的。还要保证上个命令的黄色字体：c8ad9c.2e4d610cf3e7426e与你修改的字符串要一致
 
 ```
