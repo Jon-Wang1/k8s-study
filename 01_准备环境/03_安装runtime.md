@@ -33,7 +33,7 @@ EOF
 modprobe -- overlay
 modprobe -- br_netfilter
 ```
-### 所有节点，配置Containerd所需的内核：
+### 所有节点，配置Containerd所需的内核参数：
 ``` shell
 cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
 net.bridge.bridge-nf-call-iptables  = 1
