@@ -59,6 +59,25 @@ vim /etc/containerd/config.toml
 ### 所有节点将sandbox_image的Pause镜像
 改成符合自己版本的地址registry.cn-hangzhou.aliyuncs.com/google_containers/pause:3.6：
 
+### 配置镜像加速
+      [plugins."io.containerd.grpc.v1.cri".registry.mirrors]
+          [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]
+             endpoint = [
+                "https://xdww4ceo.mirror.aliyuncs.com"
+                        ]
+          [plugins."io.containerd.grpc.v1.cri".registry.mirrors."gcr.io"]
+             endpoint = [
+                "https://gcr.mirrors.ustc.edu.cn"
+                        ]
+          [plugins."io.containerd.grpc.v1.cri".registry.mirrors."k8s.gcr.io"]
+             endpoint = [
+                "https://registry.cn-hangzhou.aliyuncs.com/google_containers"
+                        ]
+          [plugins."io.containerd.grpc.v1.cri".registry.mirrors."quay.io"]
+              endpoint = [
+                 "https://quay.mirrors.ustc.edu.cn"
+                         ]
+
 ### 所有节点启动Containerd，并配置开机自启动：
 ``` shell
 systemctl daemon-reload
