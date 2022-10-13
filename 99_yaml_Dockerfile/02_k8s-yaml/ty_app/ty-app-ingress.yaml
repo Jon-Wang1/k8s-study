@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ty-app-ingress
+  namespace: default
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: app.ty.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: ty-app-svc
+            port:
+              number: 5000
+        path: /
+        pathType: Prefix
