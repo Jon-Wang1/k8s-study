@@ -115,3 +115,14 @@ systemctl daemon-reload
 systemctl enable --now kube-proxy
 systemctl status kube-proxy
 ```
+### 为node打标签 (任何一个Master)
+```shell script
+kubectl label node master01.ty.com node-role.kubernetes.io/master=
+kubectl label node master02.ty.com node-role.kubernetes.io/master=
+kubectl label node master03.ty.com node-role.kubernetes.io/master=
+
+kubectl label node node01.ty.com node-role.kubernetes.io/node=
+kubectl label node node02.ty.com node-role.kubernetes.io/node=
+kubectl label node node03.ty.com node-role.kubernetes.io/node=
+
+```
