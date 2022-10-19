@@ -33,7 +33,6 @@ ExecStart=/usr/local/bin/kube-apiserver \
       --service-account-issuer=https://kubernetes.default.svc.cluster.local \
       --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname  \
       --enable-admission-plugins=NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,ResourceQuota  \
-      --feature-gates=LegacyServiceAccountTokenNoAutoGeneration=false \
       --authorization-mode=Node,RBAC  \
       --enable-bootstrap-token-auth=true  \
       --requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.pem  \
@@ -87,7 +86,6 @@ ExecStart=/usr/local/bin/kube-apiserver \
       --service-account-issuer=https://kubernetes.default.svc.cluster.local \
       --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname  \
       --enable-admission-plugins=NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,ResourceQuota  \
-      --feature-gates=LegacyServiceAccountTokenNoAutoGeneration=false \
       --authorization-mode=Node,RBAC  \
       --enable-bootstrap-token-auth=true  \
       --requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.pem  \
@@ -141,7 +139,6 @@ ExecStart=/usr/local/bin/kube-apiserver \
       --service-account-issuer=https://kubernetes.default.svc.cluster.local \
       --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname  \
       --enable-admission-plugins=NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,ResourceQuota  \
-      --feature-gates=LegacyServiceAccountTokenNoAutoGeneration=false \
       --authorization-mode=Node,RBAC  \
       --enable-bootstrap-token-auth=true  \
       --requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.pem  \

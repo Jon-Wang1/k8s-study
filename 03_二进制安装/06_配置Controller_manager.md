@@ -17,7 +17,6 @@ ExecStart=/usr/local/bin/kube-controller-manager \
       --cluster-signing-key-file=/etc/kubernetes/pki/ca-key.pem \
       --service-account-private-key-file=/etc/kubernetes/pki/sa.key \
       --kubeconfig=/etc/kubernetes/controller-manager.kubeconfig \
-      --feature-gates=LegacyServiceAccountTokenNoAutoGeneration=false \
       --leader-elect=true \
       --use-service-account-credentials=true \
       --node-monitor-grace-period=40s \
