@@ -1,0 +1,1 @@
+git clone https://github.com/ucloud/redis-cluster-operator.git
