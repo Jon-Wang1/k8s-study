@@ -11,6 +11,8 @@ After=network.target
 [Service]
 ExecStart=/usr/local/bin/kube-controller-manager \
       --v=2 \
+      --authentication-kubeconfig=/etc/kubernetes/controller-manager.kubeconfig \
+      --authorization-kubeconfig=/etc/kubernetes/controller-manager.kubeconfig \
       --logtostderr=true \
       --root-ca-file=/etc/kubernetes/pki/ca.pem \
       --cluster-signing-cert-file=/etc/kubernetes/pki/ca.pem \
