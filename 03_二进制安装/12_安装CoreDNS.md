@@ -1,5 +1,6 @@
 安装CoreDNS
 ### 安装官方推荐版本（推荐）
+官方镜像地址：coredns/coredns:1.8.6
 ```shell
 cd /root/k8s-ha-install/CoreDNS
 # 如果更改了k8s service的网段需要将coredns的serviceIP改成k8s service网段的第十个IP

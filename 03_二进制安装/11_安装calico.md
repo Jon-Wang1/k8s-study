@@ -1,6 +1,7 @@
 ## 安装calico
 
 ### 以下步骤只在master01执行
+官网镜像地址：calico/kube-controllers:v3.22.0
 ```shell
 cd ~
 git clone https://github.com/dotbalo/k8s-ha-install.git
