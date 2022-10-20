@@ -9,13 +9,13 @@ cd  ingress-nginx/
 2. 镜像的digest值注释
 3. hostNetwork设置为true
 4. dnsPolicy设置为 ClusterFirstWithHostNet
-5. NodeSelector添加ingress: "true"部署至指定节点
+5. nodeSelector添加ingress: "true"部署至指定节点
 6. 类型更改为kind: DaemonSet
-7. 将ingress nginx设置为默认的ingressClass
+7. 将ingressClassResource设置为默认的ingressClass
 8. 部署ingress，给需要部署ingress的节点上打标签
 
 ```shell
-kubectl node node01.ty.com ingress=true
+kubectl label node node01.ty.com ingress=true
 kubectl create ns ingress-nginx
 helm install ingress-nginx -n ingress-nginx .
 ```

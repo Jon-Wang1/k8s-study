@@ -5,7 +5,7 @@
 cd ~
 git clone https://github.com/dotbalo/k8s-ha-install.git
 cd /root/k8s-ha-install 
-git checkout manual-installation-v1.25.x 
+git checkout manual-installation-v1.23.x 
 cd calico/
 
 ```

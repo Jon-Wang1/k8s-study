@@ -2,6 +2,8 @@
 在新版的Kubernetes中系统资源的采集均使用Metrics-server，可以通过Metrics采集节点和Pod的内存、磁盘、CPU和网络的使用率。
 
 ```shell
+#kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.5.2/components.yaml
+# 官方镜像地址k8s.gcr.io/metrics-server/metrics-server:v0.5.0
 cd /root/k8s-ha-install/metrics-server
 kubectl  create -f . 
 ```
