@@ -7,7 +7,7 @@ kubectl get pod,svc -n istio-system -l app=kiali
 kubectl create ingress kiali --rule=kiali.ty.com/*=kiali:20001 -n istio-system
 ```
 
-### 安装jaeger
+#### 安装jaeger
 
 除了Kiali之外，还需要一个链路追踪的工具，安装该工具可以在Kiali的Workloads页面，查看某个服务的Traces信息。  
 直接安装即可： 
@@ -15,7 +15,7 @@ kubectl create ingress kiali --rule=kiali.ty.com/*=kiali:20001 -n istio-system
 kubectl create -f samples/addons/jaeger.yaml
 ```
 
-### 部署Prometheus并监控Istio
+#### 部署Prometheus并监控Istio
 
 ```shell
 kubectl create -f samples/addons/prometheus.yaml -f samples/addons/grafana.yaml
