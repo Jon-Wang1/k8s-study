@@ -8,7 +8,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: bookinfo-gateway
-  namespace: bookinfo
+  namespace: bookinfo  # 可以跨命名空间，namespace写不写不重要
 spec:
   selector:
     istio: ingressgateway # 使用默认的 istio ingress gateway
