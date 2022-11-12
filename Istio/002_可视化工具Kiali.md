@@ -19,5 +19,5 @@ kubectl create -f samples/addons/jaeger.yaml
 
 ```shell
 kubectl create -f samples/addons/prometheus.yaml -f samples/addons/grafana.yaml
-
+kubectl create ingress grafana --rule=grafana.ty.com/*=grafana:3000 -n istio-system 
 ```
